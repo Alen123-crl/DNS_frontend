@@ -1,0 +1,148 @@
+.section {
+  display: flex;
+  align-items: flex-start;
+  padding: 36px 24px;
+  gap: 0;
+  border-bottom: 1px solid rgba(133, 120, 120, 0.2);
+}
+
+/* Salads-style: dashed border box */
+.section.boxed {
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  margin-top: 24px;
+  padding: 28px 24px;
+}
+
+/* ── LEFT COLUMN ── */
+.left {
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-right: 0;
+  gap: 8px;
+}
+
+.label {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 4px 3px 0px #800020;
+  text-align: right;
+}
+
+/* Red box label (Salads style) */
+.label.highlight {
+  background: #D25858;
+  color: #ffffff;
+  text-shadow: 4px 3px 0px #800020;
+  padding: 4px 14px;
+  font-size: 40px;
+}
+
+.subtitle {
+  font-family: 'Kelly Slab', cursive;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: right;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+/* ── VERTICAL DIVIDER ── */
+.divider {
+  width: 1px;
+  background: #857878;
+  align-self: stretch;
+  margin: 0 28px;
+  flex-shrink: 0;
+}
+
+/* ── RIGHT COLUMN ── */
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Salad bowl image inside the boxed section */
+.sectionImg {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+  align-self: center;
+  margin-left: 16px;
+  filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5));
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Name + dots + price on one line */
+.itemRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  width: 100%;
+}
+
+.itemName {
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Dotted leader line */
+.dots {
+  flex: 1;
+  border-bottom: 2px dotted rgba(255, 255, 255, 0.35);
+  margin: 0 6px 4px;
+  min-width: 20px;
+}
+
+.price {
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.desc {
+  font-family: 'Kelly Slab', cursive;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.4;
+  max-width: 460px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .section { flex-direction: column; gap: 16px; padding: 24px 16px; }
+  .section.boxed { padding: 20px 16px; }
+  .left { width: 100%; align-items: flex-start; }
+  .label { font-size: 36px; }
+  .label.highlight { font-size: 30px; }
+  .divider { display: none; }
+  .itemName, .price { font-size: 17px; }
+  .desc { font-size: 14px; }
+}
