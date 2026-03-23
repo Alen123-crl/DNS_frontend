@@ -1,0 +1,93 @@
+.footer {
+  background: #000;
+  border-top: 1px solid #222;
+  margin-top: 40px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 40px 100px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 200px;
+  border: 1px solid #C5A059;
+  border-radius: 15px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardTitle {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  color: #C5A059;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.cardItem {
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  color: #857878;
+  letter-spacing: 0.03em;
+}
+
+.brand {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.brandLogo {
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+.deep { color: #C5A059; }
+.net  { color: #fff; }
+.soft { color: #C5A059; }
+
+.socials {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  color: #808080;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.bottom {
+  background: rgba(217,217,217,0.1);
+  padding: 14px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.bottom span,
+.bottomLinks span {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #857878;
+  letter-spacing: 0.03em;
+}
+
+.bottomLinks { display: flex; gap: 24px; cursor: pointer; }
+
+@media (max-width: 768px) {
+  .cards { padding: 24px 16px; flex-direction: column; }
+  .bottom { padding: 14px 16px; flex-direction: column; text-align: center; }
+}
