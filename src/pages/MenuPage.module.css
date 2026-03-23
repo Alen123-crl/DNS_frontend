@@ -1,0 +1,135 @@
+.page {
+  min-height: 100vh;
+  background: #000;
+}
+
+.content {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 40px 40px 0;
+}
+
+/* Wrapper holds the gold-border box + all decorative images */
+.menuWrapper {
+  position: relative;
+  /* extra padding so overflowing images don't get clipped */
+  padding: 60px 0 80px;
+}
+
+.menuBox {
+  border: 1px solid #C5A059;
+  padding: 60px 40px 40px;
+  border-radius: 2px;
+  min-height: 200px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Decorative food images ── */
+
+/* Top-left skewers — overflows above-left of the box */
+.decoTopLeft {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: -30px;
+  top: -10px;
+  object-fit: cover;
+  border-radius: 4px;
+  z-index: 2;
+  pointer-events: none;
+  filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.6));
+}
+
+/* Top-right cutting board — rotated, overflows top-right */
+.decoTopRight {
+  position: absolute;
+  width: 160px;
+  height: 110px;
+  right: -20px;
+  top: 0px;
+  object-fit: cover;
+  border-radius: 4px;
+  transform: rotate(17.93deg);
+  z-index: 2;
+  pointer-events: none;
+  filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.6));
+}
+
+/* Bottom-left sandwich on board */
+.decoBottomLeft {
+  position: absolute;
+  width: 160px;
+  height: 120px;
+  left: -20px;
+  bottom: -10px;
+  object-fit: cover;
+  border-radius: 4px;
+  z-index: 2;
+  pointer-events: none;
+  filter: drop-shadow(0px 3.47px 3.47px rgba(0,0,0,0.25));
+}
+
+.status {
+  text-align: center;
+  padding: 60px 20px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  color: #C5A059;
+  letter-spacing: 0.03em;
+}
+
+.statusError {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  color: #D25858;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.retryBtn {
+  background: #D25858;
+  border: none;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 60px 20px;
+  font-family: 'Kelly Slab', cursive;
+  color: #857878;
+  font-size: 18px;
+  text-align: center;
+}
+
+.emptyItems {
+  font-family: 'Kelly Slab', cursive;
+  color: #857878;
+  font-size: 16px;
+  text-align: center;
+  padding: 40px 0;
+}
+
+@media (max-width: 900px) {
+  .content { padding: 20px 16px 0; }
+  .menuBox { padding: 40px 16px 24px; }
+  /* hide deco images on small screens to avoid layout issues */
+  .decoTopLeft,
+  .decoTopRight,
+  .decoBottomLeft { display: none; }
+}

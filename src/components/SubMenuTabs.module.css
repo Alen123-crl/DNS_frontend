@@ -1,0 +1,30 @@
+.subBar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 20px;
+  background: rgba(0,0,0,0.6);
+  border-bottom: 1px solid #333;
+}
+
+.subTab {
+  padding: 6px 20px;
+  background: transparent;
+  border: 1px solid #857878;
+  color: #bbb;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.subTab.active {
+  border-color: #C5A059;
+  color: #C5A059;
+}
+
+.subTab:hover:not(.active) { border-color: #C5A059; color: #fff; }
